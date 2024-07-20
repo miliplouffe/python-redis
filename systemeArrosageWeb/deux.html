@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: rgb(156, 140, 140);
+  text-align: center;
+}
+
+h2 {
+  color: rgb(156, 140, 140);
+  text-align: center;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+<h1>Association des résidents du grand lac noir</h1>
+<h2>Informations sur les bonnes pratiques d'accès au lac</h2>
+
+<script type="text/javascript">
+   function myfunc2() {
+ var selectedobj=document.getElementById('w3review');
+
+  if(selectedobj.className=='hide'){  //check if classname is hide 
+    selectedobj.style.display = "block";
+    selectedobj.readOnly=true;
+    selectedobj.className ='show';
+  }else{
+    selectedobj.style.display = "none";
+    selectedobj.className ='hide';
+ }
+}
+    </script>
+
+</head>
+<body>
+
+    <article>
+        <p>Le but de ces documents est d’informer les riverains sur les enjeux de la sécurité nautique, de la santé du lac, de l’aménagement de nos berges et des droits des riverains. Les textes ont été pris à même les règlements et les lois. Ce n’est pas une interprétation juridique parce que je n’ai pas cette formation.</p>
+        <p>Lorsque ces informations seront logées dans le site web de l'association, ce site sera enlevé.</p>
+
+    </article>
+
+
+<div class="navbar">
+
+  <a href="#home">Informations</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Droits des riverains 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <label onclick="myfunc2()">Click here</label>
+        <textarea id="w3review" name="w3review" rows="4" cols="50" style="display:none">
+            At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+        </textarea>
+      
+      <a href="http://admin.lrmm.com/CMS/Media/Preview_2910_70_en-CA_0_Contexte_legal_de_l_acces_a_l_eau_au_Quebec.pdf" target="_blank">Contexte légal de l'accès à l'eau du Québec</a>
+      <a href="https://www.erudit.org/fr/revues/cd1/1970-v11-n1-cd5001975/1004779ar.pdf" target="_blank">Le droit Québécois et l'eau (1663-1969)</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="dropbtn">Sécurité nautiques 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 5</a>
+      <a href="#">Link 6</a>
+      <a href="#">Link 7</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="dropbtn">Environnement
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 5</a>
+      <a href="#">Link 6</a>
+      <a href="#">Link 7</a>
+    </div>
+  </div> 
+
+</div>
+
+
+</body>
+</html>

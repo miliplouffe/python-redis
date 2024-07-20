@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h1>Systeme arrosage Montreal</h1>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          
+          width: 5%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 1px;
+          width: 1px;
+        }
+        
+
+
+        .button {
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 2px 1px;
+          cursor: pointer;
+        }
+
+
+        input {
+          border: none;
+          color: black;
+
+        }
+        .button1 {background-color: #4CAF50;} /* Green */
+
+        </style>
+
+  
+
+<title>Systeme d'arrosage</title>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <td colspan = 1><input type="text" id="lname" name="lname" value=""></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Zone active"></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Detecteur actif"></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Valeur humidite"></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Statut du gicleur"></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Temps arrosage"></td>
+    </tr>
+    <tr>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Detecteur de pluie"></td>
+      <td colspan = 1><img src= {{data.ZoneActive0}}  width="20" height="20"></img></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value={{data.ValeurHumidite0}}></td>
+      <td colspan = 1><img src= {{data.StatutArrosage0}}  width="20" height="20"></img></td>
+    </tr>
+    <tr>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Zone 1"></td>
+      <td colspan = 1><img src= {{data.ZoneActive1}}  width="20" height="20"></img></td>
+      <td colspan = 1><img src= {{data.StatutArrosage1}}  width="20" height="20"></img></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value={{data.TempsArrosage1}}></td>
+    </tr>
+    <tr>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Zone 2"></td>
+      <td colspan = 1><img src= {{data.ZoneActive2}}  width="20" height="20"></img></td>
+      <td colspan = 1><img src= {{data.StatutArrosage2}}  width="20" height="20"></img></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value={{data.TempsArrosage2}}></td>
+    </tr>
+    <tr>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Zone 3"></td>
+      <td colspan = 1><img src= {{data.ZoneActive3}}  width="20" height="20"></img></td>
+      <td colspan = 1><img src= {{data.StatutArrosage3}}  width="20" height="20"></img></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value={{data.TempsArrosage3}}></td>
+    </tr>
+    <tr>
+      <td colspan = 1><input type="text" id="lname" name="lname" value="Zone 4"></td>
+      <td colspan = 1><img src= {{data.ZoneActive4}}  width="20" height="20"></img></td>
+      <td colspan = 1><img src= {{data.StatutArrosage4}}  width="20" height="20"></img></td>
+      <td colspan = 1><input type="text" id="lname" name="lname" value={{data.TempsArrosage4}}></td>
+    </tr>
+  </table>
+ 
+  <br>
+  <form action="/action" method="post">
+    <input class="button button1" name="submit" type="submit" value="Raffraichir la page">
+  </form>
+   
+  <br>
+  <form action="/action" method="post">
+  <label for="gicleur">Action gicleurs</label>
+    <select name="gicleur" id="gicleur">
+      <optgroup label="Zone 1">
+        <option value=""></option>
+        <option value="gicleurOpen1Btn">Ouvrir</option>
+        <option value="gicleurClose1Btn">Fermer</option>
+      </optgroup>
+      <optgroup label="Zone 2">
+        <option value="gicleurOpen2Btn">Ouvrir</option>
+        <option value="gicleurClose2Btn">Fermer</option>
+      </optgroup>
+      <optgroup label="Zone 3">
+        <option value="gicleurOpen3Btn">Ouvrir</option>
+        <option value="gicleurClose3Btn">Fermer</option>
+      </optgroup>
+      <optgroup label="Zone 4">
+        <option value="gicleurOpen4Btn">Ouvrir</option>
+        <option value="gicleurClose4Btn">Fermer</option>
+      </optgroup>
+    </select>
+
+
+    <label for="gicleur">set / reset toutes les zones</label>
+    <select name="gicleur" id="gicleur">
+      <optgroup label="set - reset">
+        <option value=""></option>
+        <option value="zoneSet">Set zones arrosage complete</option>
+        <option value="zoneReset">Set zones arrosage non-complete</option>
+      </optgroup>
+      
+    </select>
+
+    <label for="gicleur">Shutdown / Restart</label>
+    
+    <select name="gicleur" id="gicleur">
+      <optgroup label="Shutdown - Restart">
+        <option value=""></option>
+        <option value="restart">Restart</option>
+        <option value="shutdown">Shutdown</option>
+      </optgroup>
+      
+    </select>
+    <input class="button button1" name="submit" type="submit" value="Executer">
+
+  </form>
+
+</body>
+</html>
